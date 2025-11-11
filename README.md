@@ -27,6 +27,8 @@ src/
 ├── index.css # Tailwind base styles
 └── main.jsx # React app entry point
 
+yaml
+Copy code
 
 ---
 
@@ -46,26 +48,25 @@ src/
 git clone https://github.com/your-username/react-weather-app.git
 cd react-weather-app
 2️⃣ Install dependencies
+bash
+Copy code
 npm install
-
 3️⃣ Set up your API key
-
-Sign up at OpenWeatherMap
- to get a free API key.
+Sign up at OpenWeatherMap to get a free API key.
 
 Create a .env file in the root of the project:
 
+ini
+Copy code
 VITE_OPENWEATHER_API_KEY=your_api_key_here
-
 4️⃣ Start the development server
+bash
+Copy code
 npm run dev
-
-
 Then open the link shown in your terminal, typically
 👉 http://localhost:5173
 
 🌈 How It Works
-
 The user enters a city name in WeatherSearch.
 
 App.jsx calls the async helper fetchWeather(city) from api.js.
@@ -79,8 +80,6 @@ Loading and error states are handled gracefully.
 📸 Preview
 Desktop View	Mobile View
 
-	
-
 Replace placeholders with your actual screenshots.
 
 🔐 Environment Variables
@@ -91,7 +90,6 @@ VITE_OPENWEATHER_API_KEY	Your OpenWeatherMap API key (required)
 Add it to .gitignore to keep your API key private.
 
 🧠 Concepts Learned
-
 This project demonstrates core React concepts:
 
 Component composition
@@ -107,7 +105,6 @@ Conditional rendering (loading, error, data states)
 Environment variable handling in Vite
 
 🚀 Future Improvements
-
  Add 5-day weather forecast view
 
  Add search history using localStorage
@@ -119,17 +116,15 @@ Environment variable handling in Vite
  Use an Express proxy to hide the API key
 
 🧑‍💻 Author
-
 Your Name
-🔗 GitHub
- • 🌐 Portfolio
+🔗 GitHub • 🌐 Portfolio
 
 📄 License
-
-This project is licensed under the MIT License
-.
+This project is licensed under the MIT License.
 
 ⭐ If you like this project, give it a star on GitHub!
+sql
+Copy code
 git add .
 git commit -m "Add README and documentation"
 git push origin main
