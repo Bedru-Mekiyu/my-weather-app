@@ -16,16 +16,7 @@ It fetches real-time weather data from the [OpenWeatherMap API](https://openweat
 
 ---
 
-## 🧩 Project Structure
 
-**src/**
-**│**
-**├── **App.jsx # Main component – manages state and API calls
--├── api.js # API helper function (fetches weather data)
--├── WeatherSearch.jsx # Input + search button component
--├── WeatherCard.jsx # Displays fetched weather data
--├── index.css # Tailwind base styles
--└── main.jsx # React app entry point
 
 yaml
 Copy code
