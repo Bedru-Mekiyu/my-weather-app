@@ -1,121 +1,105 @@
 # 🌤️ React Weather App
 
-A simple, responsive **Weather Application** built with **React + Vite** that lets users search for current weather conditions by city name.  
-It fetches real-time weather data from the [OpenWeatherMap API](https://openweathermap.org/api).
+A responsive **Weather Application** built with **React** and **Vite** that enables users to search for current weather conditions by city name in real-time using the **OpenWeatherMap API**.
 
 ---
 
 ## 🚀 Features
 
-✅ Search weather by city name  
-✅ Display temperature, humidity, pressure, wind, and weather conditions  
-✅ Responsive and clean UI built with **Tailwind CSS**  
-✅ Loading and error handling states  
-✅ Component-based architecture (React best practices)  
-✅ Environment variables for API key security  
-
----
-
-
-
-yaml
-Copy code
+- **Search Weather**: Look up real-time weather information for any city worldwide.
+- **Detailed Weather Metrics**: View temperature, "feels like" temperature, humidity, atmospheric pressure, wind speed, and condition icons.
+- **Responsive Design**: Clean UI styled using **Tailwind CSS**, optimized for desktop and mobile devices.
+- **State Handling**: Informative loading, error, and empty search states.
+- **Secure Configuration**: Uses Vite environment variables for API key management.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **React 18+** — UI library
-- **Vite** — lightning-fast dev environment
-- **Tailwind CSS** — utility-first CSS framework
-- **OpenWeatherMap API** — real-time weather data
+- **React 19** — UI library
+- **Vite** — Frontend build tool and development server
+- **Tailwind CSS** — Utility-first CSS framework
+- **OpenWeatherMap API** — Weather data source
+
+---
+
+## 📁 Project Structure
+
+```
+.
+├── public/              # Static assets
+├── src/
+│   ├── components/      # React components
+│   │   ├── WeatherCard.jsx    # Displays weather details and condition icon
+│   │   └── WeatherSearch.jsx  # Input form for city search
+│   ├── api.js           # API request handler for OpenWeatherMap
+│   ├── App.jsx          # Root component managing application state
+│   ├── main.jsx         # Application entry point
+│   ├── App.css          # Application styles
+│   └── index.css        # Tailwind CSS imports
+├── index.html           # HTML template
+├── vite.config.js       # Vite configuration
+└── tailwind.config.js   # Tailwind CSS configuration
+```
 
 ---
 
 ## ⚙️ Setup & Installation
 
-### 1️⃣ Clone the repository
+### 1️⃣ Prerequisites
+
+Ensure you have **Node.js** (v18+ recommended) and **npm** installed.
+
+### 2️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/Bedru-Mekiyu/react-weather-app.git
 cd react-weather-app
-2️⃣ Install dependencies
-bash
-Copy code
+```
+
+### 3️⃣ Install Dependencies
+
+```bash
 npm install
-3️⃣ Set up your API key
-Sign up at OpenWeatherMap to get a free API key.
+```
 
-Create a .env file in the root of the project:
+### 4️⃣ Configure Environment Variables
 
-ini
-Copy code
-VITE_OPENWEATHER_API_KEY=your_api_key_here
-4️⃣ Start the development server
-bash
-Copy code
+Create a `.env` file in the project root and add your OpenWeatherMap API key:
+
+```env
+VITE_OPENWEATHER_API_KEY=your_openweather_api_key_here
+```
+
+> **Note:** Get a free API key by signing up at [OpenWeatherMap](https://openweathermap.org/api).
+
+### 5️⃣ Run the Development Server
+
+```bash
 npm run dev
-Then open the link shown in your terminal, typically
-👉 http://localhost:5173
+```
 
-🌈 How It Works
-The user enters a city name in WeatherSearch.
+Open `http://localhost:5173` in your browser.
 
-App.jsx calls the async helper fetchWeather(city) from api.js.
+---
 
-The app fetches data from OpenWeatherMap’s /data/2.5/weather endpoint.
+## 📜 Available Scripts
 
-If successful, the response is passed to WeatherCard for display.
+- `npm run dev` — Starts the Vite development server.
+- `npm run build` — Builds the application for production.
+- `npm run lint` — Runs ESLint code quality checks.
+- `npm run preview` — Previews the production build locally.
 
-Loading and error states are handled gracefully.
+---
 
-📸 Preview
-Desktop View	Mobile View
+## 🔐 Environment Variables
 
-Replace placeholders with your actual screenshots.
+| Variable | Description | Required |
+| --- | --- | --- |
+| `VITE_OPENWEATHER_API_KEY` | OpenWeatherMap API Key | Yes |
 
-🔐 Environment Variables
-Variable	Description
-VITE_OPENWEATHER_API_KEY	Your OpenWeatherMap API key (required)
+---
 
-⚠️ Do not commit your .env file to GitHub.
-Add it to .gitignore to keep your API key private.
+## 📄 License
 
-🧠 Concepts Learned
-This project demonstrates core React concepts:
-
-Component composition
-
-State management with useState
-
-Props and data flow (parent → child, child → parent)
-
-Async/await with API calls
-
-Conditional rendering (loading, error, data states)
-
-Environment variable handling in Vite
-
-🚀 Future Improvements
- Add 5-day weather forecast view
-
- Add search history using localStorage
-
- Add temperature unit toggle (°C / °F)
-
- Add background theme based on weather type
-
- Use an Express proxy to hide the API key
-
-🧑‍💻 Author
-Your Name
-🔗 GitHub • 🌐 Portfolio
-
-📄 License
 This project is licensed under the MIT License.
-
-⭐ If you like this project, give it a star on GitHub!
-sql
-Copy code
-git add .
-git commit -m "Add README and documentation"
-git push origin main
